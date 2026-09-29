@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stopwatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+    <h1>Stopwatch</h1>
+
+    <div id="display" class="display" role="timer" aria-label="Elapsed time">00:00.00</div>
+
+    <div class="controls">
+      <button id="lap-btn" class="btn btn-secondary" disabled>Lap</button>
+      <button id="start-btn" class="btn btn-primary">Start</button>
+      <button id="reset-btn" class="btn btn-secondary" disabled>Reset</button>
+    </div>
+
+    <section class="laps" aria-labelledby="laps-title">
+      <h2 id="laps-title">Laps</h2>
+      <p id="empty-msg" class="empty">No laps yet. Start the stopwatch, then press Lap to record a split.</p>
+      <table id="lap-table" class="lap-table" hidden>
+        <thead>
+          <tr><th scope="col">Lap</th><th scope="col">Lap time</th><th scope="col">Total</th></tr>
+        </thead>
+        <tbody id="lap-body"></tbody>
+      </table>
+    </section>
+
+    <p class="hint">
+      <kbd>Space</kbd> start or pause &nbsp; <kbd>L</kbd> lap &nbsp; <kbd>R</kbd> reset
+    </p>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
